@@ -14,7 +14,14 @@ get '/surprise' do
   "You just won £1,000,000!!!!"
 end
 
-get '/cat' do
+get '/random-cat' do
   @random_name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @random_name = params[:name]
+  @color = params[:color]
   erb(:index)
 end
