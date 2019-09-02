@@ -1,6 +1,6 @@
 require 'sinatra'
 
-set :session_secret, 'super secret'
+set :session_secret, 'super session'
 
 get '/' do
   "Hello Iliana and Eithel :D. How are you?"
@@ -15,7 +15,5 @@ get '/surprise' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red'>
-    <img src='http://bit.ly/1eze8aE'>
-   </div>"
+  erb(:index)
 end
